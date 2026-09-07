@@ -10,7 +10,7 @@ I build technical systems where reliability, data and user requirements intersec
 
 ### [Policy Copilot](https://github.com/NathS04/policy_copilot_submission)
 > **Reliable RAG / Evaluation / Grounding / Auditability**
-> Evidence-grounded policy QA system wrapped with cross-encoder reranking, confidence-gated abstention, per-claim citation verification, contradiction surfacing, and structured audit exports. Evaluated on a 63-query golden set and 292-test reliability suite, measuring explicit reliability vs usefulness trade-offs.
+> Evidence-grounded policy QA system wrapped with cross-encoder reranking, confidence-gated abstention, per-claim citation verification, contradiction surfacing, and structured audit exports. Evaluated on a 63-query golden set and 292-test core reliability suite (343 tests passing across expanded 346-test project collection), measuring explicit reliability vs usefulness trade-offs.
 
 ### [EventHub — Event & RSVP API](https://github.com/NathS04/comp3011-cw1-api)
 > **FastAPI / PostgreSQL / API Security / Testing**
