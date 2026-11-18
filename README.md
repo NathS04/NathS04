@@ -1,37 +1,28 @@
 # Nathaniel Sebastian
 
-Computer Science with Artificial Intelligence graduate from the University of Leeds.
+**Graduate software and applied AI engineer**
 
-I build technical systems where reliability, data and user requirements intersect — from evidence-grounded AI evaluation to production-style APIs and financial data controls.
+Computer Science with Artificial Intelligence graduate from the University of Leeds (2:1). Based in Cardiff and open to London relocation and client travel.
 
----
+I build Python APIs, evidence-grounded AI tools and data pipelines. My focus is making systems easier to test, inspect and explain.
 
-## Selected Work
+[Portfolio — Future](https://nathaniel-sebastian-portfolio.nathannn-s04.chatgpt.site/) · [CV](https://nathaniel-sebastian-portfolio.nathannn-s04.chatgpt.site/cv/) · [LinkedIn](https://www.linkedin.com/in/nathaniel-sebastian-11a877301/) · [Email](mailto:nathannn.s04@gmail.com)
 
-### [Policy Copilot](https://github.com/NathS04/policy_copilot_submission)
-> **Reliable RAG / Evaluation / Grounding / Auditability**
-> Evidence-grounded policy QA system wrapped with cross-encoder reranking, confidence-gated abstention, per-claim citation verification, contradiction surfacing, and structured audit exports. Evaluated on a 63-query golden set and 292-test core reliability suite (343 tests passing across expanded 346-test project collection), measuring explicit reliability vs usefulness trade-offs.
+## Selected projects
 
-### [EventHub — Event & RSVP API](https://github.com/NathS04/comp3011-cw1-api)
-> **FastAPI / PostgreSQL / API Security / Testing**
-> Production-style backend API featuring 24 REST endpoints, JWT authentication, granular RBAC, Leeds City Council data ingestion, data provenance tracking, rate limiting, and 84 automated tests at ~95% coverage. Deployed live on Render.
+| Project | What it demonstrates | Scope |
+| --- | --- | --- |
+| [Policy Copilot](https://github.com/NathS04/policy_copilot_submission) | Policy-document retrieval, evidence checks, abstention, evaluation and an audit workbench. | University dissertation; synthetic benchmark and a small public-guidance transfer study. |
+| [EventHub](https://github.com/NathS04/comp3011-cw1-api) | FastAPI backend with authentication, resource ownership, event/RSVP management, data provenance and automated tests. | University coursework; local setup and deployment configuration included. |
+| [Ledger Data Quality](https://github.com/NathS04/ledger-data-quality) | Python/SQL ingestion, validation, reconciliation and exception reporting in SQLite. | Personal project using synthetic financial transactions. |
+| [Search Engine Tool](https://github.com/NathS04/comp3011-cw2-api) | Web crawling, a positional inverted index, TF-IDF ranking, phrase search and offline tests. | University coursework; benchmark results apply to the documented local corpus and environment. |
 
-### [Ledger Data Quality](https://github.com/NathS04/ledger-data-quality)
-> **Python / SQL / Reconciliation / Control Analytics**
-> Audit-analytics and data-quality pipeline processing 10,150 synthetic financial transactions. Performs SQLite standardisation, completeness/uniqueness/referential-integrity controls, duplicate payment screening, Benford distribution analysis, and £0.01 GL reconciliation.
+Each repository includes setup instructions and evidence for its claims. Academic prototypes and synthetic-data demonstrations are labelled explicitly.
 
-### [Search Engine Tool](https://github.com/NathS04/comp3011-cw2-api)
-> **Information Retrieval / Crawling / Indexing / Ranking**
-> Web crawling and IR engine that indexes 202 pages, builds a 4,646-term positional inverted index, supports log-normalised TF-IDF ranking with title-field weighting, exact phrase search, and edit-distance spelling suggestions with sub-millisecond query latency.
+## Technical focus
 
----
+- **Software and data:** Python, SQL, FastAPI, PostgreSQL, SQLite and pandas.
+- **Applied AI:** retrieval-augmented generation, information retrieval and evaluation.
+- **Delivery:** requirements, documentation, pytest, Git and GitHub Actions.
 
-## Technical Focus
-
-`Python` · `SQL` · `FastAPI` · `PostgreSQL` · `Applied AI` · `RAG` · `Information Retrieval` · `REST APIs` · `Testing` · `Git`
-
----
-
-## Target Roles
-
-Technical Consulting · Solutions Engineering · Applied AI / AI Solutions Engineer · Forward-Deployed Engineering · Product Analyst / APM · Backend Engineering
+Open to graduate and junior opportunities in software engineering, applied AI and solutions engineering.
