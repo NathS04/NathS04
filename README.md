@@ -6,7 +6,7 @@ Computer Science with Artificial Intelligence graduate from the University of Le
 
 I build Python APIs, evidence-grounded AI tools and data pipelines. My focus is making systems easier to test, inspect and explain.
 
-[Portfolio — Future](https://nathaniel-sebastian-portfolio.nathannn-s04.chatgpt.site/) · [CV](https://nathaniel-sebastian-portfolio.nathannn-s04.chatgpt.site/cv/) · [LinkedIn](https://www.linkedin.com/in/nathaniel-sebastian-11a877301/) · [Email](mailto:nathannn.s04@gmail.com)
+[Portfolio — Future](https://future-nathaniel.pages.dev/) · [CV](https://future-nathaniel.pages.dev/cv/) · [LinkedIn](https://www.linkedin.com/in/nathaniel-sebastian-11a877301/) · [Email](mailto:nathannn.s04@gmail.com)
 
 ## Selected projects
 
