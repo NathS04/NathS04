@@ -1,0 +1,12 @@
+{
+  "provider": "stripe_payment_links",
+  "status": "coming_soon",
+  "slug": "first-release",
+  "title": "The first drop",
+  "description": "A sealed digital subscription. Membership stays closed until launch.",
+  "amountMinor": null,
+  "currency": "gbp",
+  "paymentLink": null,
+  "deliveryDescription": null,
+  "fulfilmentReady": false
+}

@@ -1,28 +1,34 @@
-# Nathaniel Sebastian
+# Future — Nathaniel Sebastian
 
-**Graduate software and applied AI engineer**
+Editable source for [Future](https://future-nathaniel.pages.dev/), a personal portfolio and digital-product storefront.
 
-Computer Science with Artificial Intelligence graduate from the University of Leeds (2:1). Based in Cardiff and open to London relocation and client travel.
+The site includes three engineering case studies, a public GitHub project directory, a downloadable CV and a pre-release store.
 
-I build Python APIs, evidence-grounded AI tools and data pipelines. My focus is making systems easier to test, inspect and explain.
+## Run and verify
 
-[Portfolio — Future](https://future-nathaniel.pages.dev/) · [CV](https://future-nathaniel.pages.dev/cv/) · [LinkedIn](https://www.linkedin.com/in/nathaniel-sebastian-11a877301/) · [Email](mailto:nathannn.s04@gmail.com)
+Requires Node.js 20 or later. The existing Replit Run setup also uses Python 3 to serve the generated pages.
 
-## Selected projects
+```sh
+npm run build
+npm test
+node scripts/check-links.mjs
+python3 -m http.server 3000 --directory dist
+```
 
-| Project | What it demonstrates | Scope |
-| --- | --- | --- |
-| [Policy Copilot](https://github.com/NathS04/policy_copilot_submission) | Policy-document retrieval, evidence checks, abstention, evaluation and an audit workbench. | University dissertation; synthetic benchmark and a small public-guidance transfer study. |
-| [EventHub](https://github.com/NathS04/comp3011-cw1-api) | FastAPI backend with authentication, resource ownership, event/RSVP management, data provenance and automated tests. | University coursework; local setup and deployment configuration included. |
-| [Ledger Data Quality](https://github.com/NathS04/ledger-data-quality) | Python/SQL ingestion, validation, reconciliation and exception reporting in SQLite. | Personal project using synthetic financial transactions. |
-| [Search Engine Tool](https://github.com/NathS04/comp3011-cw2-api) | Web crawling, a positional inverted index, TF-IDF ranking, phrase search and offline tests. | University coursework; benchmark results apply to the documented local corpus and environment. |
+Open `http://localhost:3000`. The store is at `/products/`. Rebuild after changing source or content.
 
-Each repository includes setup instructions and evidence for its claims. Academic prototypes and synthetic-data demonstrations are labelled explicitly.
+## Edit
 
-## Technical focus
+- `content/profile.json` holds the profile, CV link and public site address.
+- `content/projects.json` holds the case studies.
+- `src/pages.mjs` holds the portfolio page templates.
+- `src/products.mjs` holds the store, release and checkout pages.
+- `public/assets/storefront.css` styles the store.
+- `public/assets/github-data.js` loads public repositories. Four introductory coursework repositories are excluded from the portfolio directory.
+- `public/images/` and `public/files/` contain the published artwork and CV.
 
-- **Software and data:** Python, SQL, FastAPI, PostgreSQL, SQLite and pandas.
-- **Applied AI:** retrieval-augmented generation, information retrieval and evaluation.
-- **Delivery:** requirements, documentation, pytest, Git and GitHub Actions.
+## Publish
 
-Open to graduate and junior opportunities in software engineering, applied AI and solutions engineering.
+Build, then upload the contents of `dist/` through a new production deployment in the existing `future-nathaniel` Cloudflare Pages project. The project uses Direct Upload. Source commits are saved separately on GitHub.
+
+The store is marked **Yet to drop**. Product details and pricing will be announced before sales open. The source includes Stripe Payment Link support, guarded by the product status and fulfilment configuration in `content/commerce.json`.

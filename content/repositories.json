@@ -1,0 +1,85 @@
+{
+  "snapshotAt": "2026-11-17",
+  "repositories": [
+    {
+      "name": "comp3011-cw2-api",
+      "full_name": "NathS04/comp3011-cw2-api",
+      "html_url": "https://github.com/NathS04/comp3011-cw2-api",
+      "private": false,
+      "owner": {
+        "login": "NathS04"
+      },
+      "archived": false,
+      "fork": null,
+      "language": "Python",
+      "description": "Search engine coursework: crawling, indexing, TF-IDF ranking and query support.",
+      "updated_at": null,
+      "stargazers_count": null,
+      "forks_count": null
+    },
+    {
+      "name": "comp3011-cw1-api",
+      "full_name": "NathS04/comp3011-cw1-api",
+      "html_url": "https://github.com/NathS04/comp3011-cw1-api",
+      "private": false,
+      "owner": {
+        "login": "NathS04"
+      },
+      "archived": false,
+      "fork": null,
+      "language": "Python",
+      "description": "EventHub: FastAPI event and RSVP backend with authentication and data provenance.",
+      "updated_at": null,
+      "stargazers_count": null,
+      "forks_count": null
+    },
+    {
+      "name": "NathS04",
+      "full_name": "NathS04/NathS04",
+      "html_url": "https://github.com/NathS04/NathS04",
+      "private": false,
+      "owner": {
+        "login": "NathS04"
+      },
+      "archived": false,
+      "fork": null,
+      "language": null,
+      "description": null,
+      "updated_at": null,
+      "stargazers_count": null,
+      "forks_count": null
+    },
+    {
+      "name": "ledger-data-quality",
+      "full_name": "NathS04/ledger-data-quality",
+      "html_url": "https://github.com/NathS04/ledger-data-quality",
+      "private": false,
+      "owner": {
+        "login": "NathS04"
+      },
+      "archived": false,
+      "fork": null,
+      "language": "Python",
+      "description": "Python and SQL pipeline for synthetic financial-data validation, reconciliation and exception reporting.",
+      "updated_at": null,
+      "stargazers_count": null,
+      "forks_count": null
+    },
+    {
+      "name": "policy_copilot_submission",
+      "full_name": "NathS04/policy_copilot_submission",
+      "html_url": "https://github.com/NathS04/policy_copilot_submission",
+      "private": false,
+      "owner": {
+        "login": "NathS04"
+      },
+      "archived": false,
+      "fork": null,
+      "language": "Python",
+      "description": "Evidence-grounded policy question answering with retrieval, citation checks, abstention and audit exports.",
+      "updated_at": null,
+      "stargazers_count": null,
+      "forks_count": null
+    }
+  ]
+}

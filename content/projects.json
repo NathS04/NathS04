@@ -1,0 +1,168 @@
+[
+  {
+    "slug": "policy-copilot",
+    "name": "Policy Copilot",
+    "number": "01",
+    "category": "Applied AI",
+    "scope": "Academic dissertation",
+    "repository": "https://github.com/NathS04/policy_copilot_submission",
+    "repoName": "policy_copilot_submission",
+    "theme": "copilot",
+    "summary": "Policy questions answered against source documents, with paragraph citations and a clear abstention when the evidence is insufficient.",
+    "technologies": [
+      "Python",
+      "RAG",
+      "BM25",
+      "Streamlit",
+      "Evaluation"
+    ],
+    "metric": "63",
+    "metricLabel": "synthetic benchmark questions",
+    "flow": [
+      "Policy documents",
+      "Retrieve & rerank",
+      "Verify evidence",
+      "Answer or abstain"
+    ],
+    "problem": "A fluent answer is not necessarily a supported one. I explored how a question-answering system could make its evidence inspectable and refuse questions the source material could not support.",
+    "contribution": "I built and evaluated the retrieval, confidence gates, citation checks and audit workbench as my University of Leeds dissertation. The implementation combines stable paragraph identifiers, retrieval and reranking with claim-level checks and an extractive fallback.",
+    "decisions": [
+      [
+        "Make evidence traceable",
+        "Stable paragraph identifiers connect each surfaced answer to its source and audit record."
+      ],
+      [
+        "Treat abstention as a design choice",
+        "Confidence gates and citation checks reduce unsupported output, but a system that refuses too often is less useful."
+      ],
+      [
+        "Keep an offline path",
+        "BM25 and extractive mode allow the core workflow to run without a paid language-model API."
+      ]
+    ],
+    "evidence": "The repository documents a 63-question synthetic benchmark and a 292-test core suite. It reports that the stricter configuration improved grounding while reducing answer coverage. These are documented project results, not tests rerun by this website.",
+    "limitations": [
+      "A small synthetic benchmark does not establish performance on every organisation's policies.",
+      "Dense retrieval was unavailable in one reproduction environment, which used the documented BM25 fallback.",
+      "Some generative adversarial evaluation was limited by API quota. Citation heuristics and confidence gates do not guarantee correctness."
+    ],
+    "lesson": "Reliability and usefulness have to be measured together. Better grounding is valuable only if people can still get enough useful answers.",
+    "source": "Public repository README, reviewed 17 November 2026.",
+    "role": "Designed, built and evaluated the retrieval and verification workflow.",
+    "decision": "Measure answer usefulness alongside grounding.",
+    "evidenceLink": "https://github.com/NathS04/policy_copilot_submission/blob/main/INSTRUCTIONS_FOR_EVALUATOR.md",
+    "evidenceLabel": "Reproduction guide",
+    "image": "/images/policy-copilot-workbench.png",
+    "imageAlt": "Repository workbench figure showing a remote-work policy question, a supported answer and paragraph references.",
+    "imageCaption": "Workbench figure from the public dissertation repository.",
+    "imageSource": "https://github.com/NathS04/policy_copilot_submission/blob/main/docs/report/figures/screenshot_answerable_query.png"
+  },
+  {
+    "slug": "eventhub",
+    "name": "EventHub",
+    "number": "02",
+    "category": "Backend engineering",
+    "scope": "Academic project",
+    "repository": "https://github.com/NathS04/comp3011-cw1-api",
+    "repoName": "comp3011-cw1-api",
+    "theme": "eventhub",
+    "summary": "A Python API for events and RSVPs, with authentication, resource ownership and traceable imports from Leeds City Council.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Pytest"
+    ],
+    "metric": "24",
+    "metricLabel": "REST endpoints",
+    "flow": [
+      "Client request",
+      "Auth & ownership",
+      "FastAPI services",
+      "PostgreSQL"
+    ],
+    "problem": "An event API needs more than basic create, read, update and delete operations. It needs to handle who can change each resource, import external records safely and explain the provenance of those records.",
+    "contribution": "I built an event-management backend for University of Leeds coursework, covering events, attendees, RSVPs, analytics and administrative imports. I integrated Leeds City Council event data and added provenance records, authentication, access controls and automated checks.",
+    "decisions": [
+      [
+        "Check ownership as well as roles",
+        "Resource-level owner checks complement JWT authentication and administrator permissions."
+      ],
+      [
+        "Keep imported data explainable",
+        "Provenance records connect imported events to their source dataset and import batch."
+      ],
+      [
+        "Support development and deployment",
+        "Dialect-aware queries support SQLite locally and PostgreSQL, with Alembic migrations and CI checks."
+      ]
+    ],
+    "evidence": "The public README documents 24 REST endpoints, 84 automated tests and approximately 95% test coverage. It also describes Ruff, mypy and Bandit checks. These are repository-reported figures; coverage is not a guarantee of complete correctness.",
+    "limitations": [
+      "This is an academic backend project, not a commercial event platform with established customers.",
+      "The historical Render deployment has not been verified for this portfolio, so the repository is the primary link.",
+      "Test coverage measures execution of code during a test suite, not every possible failure or security issue."
+    ],
+    "lesson": "Integration work becomes easier to explain and debug when ownership, provenance and error behaviour are designed into the API.",
+    "source": "Public repository README, reviewed 17 November 2026.",
+    "role": "Built the API, access controls, import workflow and automated checks.",
+    "decision": "Keep imported data traceable to its source.",
+    "evidenceLink": "https://github.com/NathS04/comp3011-cw1-api/blob/main/VERIFICATION_INSTRUCTIONS.md",
+    "evidenceLabel": "Verification guide"
+  },
+  {
+    "slug": "ledger-data-quality",
+    "name": "Ledger Data Quality",
+    "number": "03",
+    "category": "Data engineering",
+    "scope": "Personal project · synthetic data",
+    "repository": "https://github.com/NathS04/ledger-data-quality",
+    "repoName": "ledger-data-quality",
+    "theme": "ledger",
+    "summary": "A reproducible Python and SQL pipeline that checks synthetic financial exports, reconciles totals and produces exception reports.",
+    "technologies": [
+      "Python",
+      "pandas",
+      "SQL",
+      "SQLite",
+      "Data controls"
+    ],
+    "metric": "10,150",
+    "metricLabel": "synthetic transactions",
+    "flow": [
+      "Mixed exports",
+      "Clean & standardise",
+      "Validate & reconcile",
+      "Exception reports"
+    ],
+    "problem": "Financial exports arrive in different formats and can contain missing fields, duplicate candidates and inconsistent references. Analysis is more useful when those defects are visible before anyone relies on the totals.",
+    "contribution": "I built a Python and SQL pipeline that regenerates synthetic records, standardises them into SQLite, runs data-quality checks and produces exception and KPI outputs. I added reconciliation to independent control totals and documented a downstream Power BI workflow.",
+    "decisions": [
+      [
+        "Make defects reproducible",
+        "Fixed-seed synthetic data includes deliberately injected issues so the checks can be demonstrated repeatedly."
+      ],
+      [
+        "Separate flags from conclusions",
+        "Duplicate and Benford screening prioritise investigation; neither establishes fraud or a confirmed duplicate payment."
+      ],
+      [
+        "Reconcile before reporting",
+        "Ledger totals are compared with independent controls using a documented £0.01 demonstration tolerance."
+      ]
+    ],
+    "evidence": "The repository documents 10,150 synthetic transactions, completeness and reference checks, a £0.01 reconciliation tolerance, and CSV outputs for exceptions, KPIs and reporting. Findings are demonstrations on synthetic records.",
+    "limitations": [
+      "No client financial data is used and no recovered money or business impact is claimed.",
+      "Screening signals need transaction-level review and business context.",
+      "The reconciliation tolerance is a demonstration choice; a real engagement would require an agreed control policy."
+    ],
+    "lesson": "A useful data pipeline does more than transform rows. It makes the checks, exceptions and next investigation steps understandable.",
+    "source": "Public repository README, reviewed 17 November 2026.",
+    "role": "Built the pipeline, data controls and exception reporting.",
+    "decision": "Keep screening signals separate from conclusions.",
+    "evidenceLink": "https://github.com/NathS04/ledger-data-quality/blob/main/outputs/EXECUTIVE_FINDINGS.md",
+    "evidenceLabel": "Example findings"
+  }
+]
